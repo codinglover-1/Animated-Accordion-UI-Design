@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .accordation_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    }
+    .item{
+        width: 400px;
+        color: white;
+    }
+    .title{
+        padding: 10px;
+        background-color:#16A085 ;
+        position: relative;
+        font-weight: 900;
+    }
+    .title span:nth-child(2){
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        font-size: 20px;
+        font-weight: 900;
+        
+    }
+    .accordation_content{
+        padding: 10px;
+        background-color: #1ABC9C;
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .plus{
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+    
+    <div class="accordation_container">
+
+        <div class="item">
+            <div class="accordation title">
+                <span>Title</span>
+                <span>+</span>
+            </div>
+            <div class="accordation_content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="accordation title">
+                <span>Title</span>
+                <span>+</span>
+            </div>
+            <div class="accordation_content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="accordation title">
+                <span>Title</span>
+                <span>+</span>
+            </div>
+            <div class="accordation_content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="accordation title">
+                <span>Title</span>
+                <span>+</span>
+            </div>
+            <div class="accordation_content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="accordation title">
+                <span>Title</span>
+                <span class="">+</span>
+            </div>
+            <div class="accordation_content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+        let item=document.querySelectorAll('.title');
+
+        item.forEach(title=>{
+
+            title.addEventListener('click',()=>{
+
+let content_d=title.nextElementSibling;
+let plus=title.querySelector('span:nth-child(2)');
+
+
+plus.classList.toggle('plus');
+content_d.classList.toggle('show');
+
+
+
+            })
+
+
+        })
+
+
+
+
+
+    </script>
+  
+
+</body>
+</html>
